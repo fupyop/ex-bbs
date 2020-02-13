@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<strong>掲示板アプリケーション</strong>
+<form action="ex4.html" th:action="@{/insertArticle}" method = "post">
+投稿者名:<input type="text" name="name"><br>
+投稿内容:<textarea name="content"></textarea> <br>
+<button>記事投稿</button><br>
+</form>
+<hr>
+
+<span th:each="article:${articleList}">
+投稿ID:<span th:text="${article.id}">投稿ID</span><br>
+投稿者名：<span th:text="${article.name}">投稿者名</span><br>
+投稿内容：<span th:text="${article.content}">投稿内容</span><br>
+<button>記事削除</button>
+ <span th:each="comment:${article.commentList}">
+  <span th:text="${comment.id}"></span><br>
+  <span th:text="${comment.name}"></span><br>
+  <span th:text="${comment.content}"></span><br>
+ </span>
+
+
+</span>
+
+<form action="ex4.html" th:action="@{/ex4/insertArticle}" method = "post">
+名前:<input type="text" name="name"><br>
+コメント:<textarea name="content"></textarea> <br>
+</form>
+<button>コメント投稿</button>
+</body>
+</html>
