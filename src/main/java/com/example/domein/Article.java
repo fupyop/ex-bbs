@@ -2,10 +2,28 @@ package com.example.domein;
 
 import java.util.List;
 
+/**
+ * 記事を表すドメイン.
+ * 
+ * @author fuka
+ *
+ */
 public class Article {
+	/**
+	 * ID
+	 */
 	private Integer id;
+	/**
+	 * 投稿者名
+	 */
 	private String name;
+	/**
+	 * 投稿内容
+	 */
 	private String content;
+	/**
+	 * コメントリスト
+	 */
 	private List<Comment> commentList;
 	public Integer getId() {
 		return id;

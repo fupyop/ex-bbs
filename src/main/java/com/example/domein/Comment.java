@@ -1,9 +1,21 @@
 package com.example.domein;
 
 public class Comment {
+	/**
+	 * ID
+	 */
 	private Integer id;
+	/**
+	 * 名前
+	 */
 	private String name;
+	/**
+	 * コメント内容
+	 */
 	private String content;
+	/**
+	 * 投稿ID
+	 */
 	private Integer articleId;
 	public Integer getId() {
 		return id;
